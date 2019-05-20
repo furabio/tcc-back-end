@@ -1,8 +1,8 @@
-package br.edu.fatecjahu.classroom.resources.exceptions;
+package br.edu.fatecjahu.classroom.application.exceptions;
 
 import java.time.LocalDateTime;
 
-public class ErrorDetail {
+public class ErrorDetails {
     private String title;
     private int status;
     private String detail;
@@ -29,52 +29,54 @@ public class ErrorDetail {
         return developerMessage;
     }
 
-    private ErrorDetail(Builder builder) {
-        this.title = builder.title;
-        this.status = builder.status;
-        this.detail = builder.detail;
-        this.timestamp = builder.timestamp;
-        this.developerMessage = builder.developerMessage;
+    private ErrorDetails(Builder builder) {
+        title = builder.title;
+        status = builder.status;
+        detail = builder.detail;
+        timestamp = builder.timestamp;
+        developerMessage = builder.developerMessage;
     }
 
-    public static class Builder {
-
+    public static final class Builder {
         private String title;
         private int status;
         private String detail;
         private LocalDateTime timestamp;
         private String developerMessage;
 
-        public Builder() {
+        public static Builder builder() {
+            return new Builder();
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setStatus(int status) {
+        public Builder status(int status) {
             this.status = status;
             return this;
         }
 
-        public Builder setDetail(String detail) {
+
+        public Builder detail(String detail) {
             this.detail = detail;
             return this;
         }
 
-        public Builder setTimestamp(LocalDateTime timestamp) {
+        public Builder timestamp(LocalDateTime timestamp) {
             this.timestamp = timestamp;
             return this;
         }
 
-        public Builder setDeveloperMessage(String developerMessage) {
+        public Builder developerMessage(String developerMessage) {
             this.developerMessage = developerMessage;
             return this;
         }
 
-        public ErrorDetail build() {
-            return new ErrorDetail(this);
+
+        public ErrorDetails build() {
+            return new ErrorDetails(this);
         }
     }
 }

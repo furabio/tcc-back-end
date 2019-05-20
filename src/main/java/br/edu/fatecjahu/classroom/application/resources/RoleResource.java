@@ -1,4 +1,4 @@
-package br.edu.fatecjahu.classroom.resources;
+package br.edu.fatecjahu.classroom.application.resources;
 
 import br.edu.fatecjahu.classroom.domain.model.Role;
 import br.edu.fatecjahu.classroom.domain.service.RoleService;

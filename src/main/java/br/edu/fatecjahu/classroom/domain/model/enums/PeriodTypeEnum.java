@@ -1,4 +1,4 @@
-package br.edu.fatecjahu.classroom.domain.enums;
+package br.edu.fatecjahu.classroom.domain.model.enums;
 
 public enum PeriodTypeEnum {
     MANHA(1L, "MANHÃ"),

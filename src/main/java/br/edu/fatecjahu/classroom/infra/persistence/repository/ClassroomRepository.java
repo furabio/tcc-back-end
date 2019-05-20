@@ -1,4 +1,4 @@
-package br.edu.fatecjahu.classroom.repository;
+package br.edu.fatecjahu.classroom.infra.persistence.repository;
 
 import br.edu.fatecjahu.classroom.domain.model.Classroom;
 import org.springframework.data.jpa.repository.JpaRepository;

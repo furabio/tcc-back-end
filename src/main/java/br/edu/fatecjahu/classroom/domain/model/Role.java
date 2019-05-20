@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Data
@@ -17,6 +19,8 @@ import javax.persistence.Table;
 public class Role extends AbstractEntity {
     private static final long serialVersionUID = -2807622008383900081L;
 
+    @NotNull
+    @NotEmpty
     private String name;
 
 }
